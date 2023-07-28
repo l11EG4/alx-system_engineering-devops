@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# for loop in bash
+# Made by MEGATRON
+
+for file in *; do
+	echo -e "$file" | cut -d "-" -f2
+done 
