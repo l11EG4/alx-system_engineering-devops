@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Behead a process
+# Kill forcibly
+# Made by MEGATRON
+
+pkill -KILL -f "7-highlander"

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Get bash pid
+# shellcheck disable=SC2009
+# Made by MEGATRON
+
+ps -auxf | grep "bash"

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# What is my PID
+# Made by MEGATRON
+
+echo $$

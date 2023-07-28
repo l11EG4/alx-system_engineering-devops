@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# display bash PID made easy
+# Made by MEGATRON
+
+pgrep -l bash

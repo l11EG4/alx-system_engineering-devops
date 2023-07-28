@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Kill script
+# Made by MEGATRON
+
+PROCESS_TO_KILL="4-to_infinity_and_beyond"
+
+pkill -f "${PROCESS_TO_KILL}"
