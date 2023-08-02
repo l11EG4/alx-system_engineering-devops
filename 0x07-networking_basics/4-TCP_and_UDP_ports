@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Display listening sockects -l PID -p
+# Made by MEGATRON
+
+sudo netstat -pl
