@@ -2,4 +2,4 @@
 # display all active ipv4
 # Made by MEGATRON
 
-ifconfig | sed 's/  \+ //g' | grep "inet " | cut -d " " -f2
+ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | cut -b 11-
