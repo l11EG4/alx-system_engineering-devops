@@ -2,4 +2,4 @@
 # Made by MEGA
 # Generat RSA key pair
 
-ssh-keygen -b 4096 -f school -t rsa -N betty
+ssh-keygen -t rsa -b 4096 -P betty -f school
