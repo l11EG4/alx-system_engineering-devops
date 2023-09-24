@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Made by MEGA
+
+ssh ubuntu -i ~/.ssh/school
