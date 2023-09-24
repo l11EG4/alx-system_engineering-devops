@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Made by MEGA
+# Generat RSA key pair
+
+ssh-keygen -b 4096 -f school -t rsa -N betty
