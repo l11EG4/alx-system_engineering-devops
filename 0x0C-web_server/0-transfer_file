@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# Made by MEGFA
+# Made by MEGATHRON
 # Script transfers files from client to server
 # disp Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY
-# If less than 3 params transfer to ~/
 
 PATH_TO_FILE="$1";
 IP="$2";
@@ -15,6 +14,8 @@ if [ "$#" -lt 3 ]; then
 	echo -e "$ERROR";
 	exit 1;
 fi
+
+# If less than 3 params transfer to ~/
 
 if [ "$#" -eq 3 ]; then
 	scp -o "$HOST_KEY_RULE" "$PATH_TO_FILE" "${USERNAME}@${IP}:~/"
