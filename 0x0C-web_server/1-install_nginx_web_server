@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Made by MEGA
 # Listen on port 80
-
 # Install nginix web server
 
 sudo apt-get -y update
