@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Made by MEGATHRON
+# Made by MEGA
 # check for cmd line arguments
 
 if [ $# -lt 4 ]
