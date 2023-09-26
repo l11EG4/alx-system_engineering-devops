@@ -1,28 +1,24 @@
 #!/usr/bin/env bash
-# Made by MEGAT
-# check for cmd line arguments
+# Made by MEGFA
+# Script transfers files from client to server
+# disp Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY
+# If less than 3 params transfer to ~/
 
-if [ $# -lt 4 ]
-then
-	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
-	exit 1
+PATH_TO_FILE="$1";
+IP="$2";
+USERNAME="$3";
+PATH_TO_SSH_KEY="$4";
+ERROR="Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY";
+HOST_KEY_RULE="StrictHostKeyChecking=no"
+
+if [ "$#" -lt 3 ]; then
+	echo -e "$ERROR";
+	exit 1;
 fi
 
-# assigning paramentals to visible
-
-path_tpo_file=$1
-ip=$2
-username=$3
-path_to_ssh_key="$4"
-
-# disabbling strict host key checking
-
-scp -o "StrictHostKeyChecking=no" -i "$path_to_ssh_key" "$path_tpo_file" ""$username@$ip:~/"
-
-# check transfer if is successful
-if [ $? -eq 0 ]
-then
-	echo "FILE WAS TRANSFERED SUCCESSFULLY"
-else
-	echo "FILE TRANSFER FAILED"
+if [ "$#" -eq 3 ]; then
+	scp -o "$HOST_KEY_RULE" "$PATH_TO_FILE" "${USERNAME}@${IP}:~/"
+	exit 0;
 fi
+
+scp -o "$HOST_KEY_RULE" -i "$PATH_TO_SSH_KEY" "$PATH_TO_FILE" "${USERNAME}@${IP}:~/";
