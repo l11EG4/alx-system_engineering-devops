@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Made by MEGA
+# Made by MEGAT
 ## Perform the nginx server install and config
 
 sudo apt-get -y update
