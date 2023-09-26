@@ -26,3 +26,4 @@ then
 	echo "FILE WAS TRANSFERD SUCCESSFULLY"
 else
 	echo "FILE TRANSFER FAILED"
+fi
