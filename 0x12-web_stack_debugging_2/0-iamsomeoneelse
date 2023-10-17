@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# MAde by MEGA
-# Runs the whoami command under the user passed as argument.
+# Run a command as someone else
+
 sudo -u "$1" whoami
