@@ -5,3 +5,9 @@ exec {'sets file limite for nginx':
   path    => '/bin/:/sbin/:/usr/bin/:/usr/sbin/',
   onlyif  => 'test -f /etc/default/nginx'
 }
+
+# Restart Nginx
+exec { 'nginx-restart':
+  command => 'nginx restart',
+  path    => '/etc/init.d/'
+}
