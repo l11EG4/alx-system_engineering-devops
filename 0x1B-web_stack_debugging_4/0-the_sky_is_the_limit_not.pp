@@ -1,5 +1,5 @@
 # fixes a file
-# Made by MEGA
+# Made by MEGATHRON
 exec {'sets file limite for nginx':
   command => 'sed -i "s/15/2000/g" /etc/default/nginx',
   path    => '/bin/:/sbin/:/usr/bin/:/usr/sbin/',
